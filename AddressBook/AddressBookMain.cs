@@ -204,6 +204,31 @@ internal class AddressBookMain
             }
         }
     }
+    public void DeleteContact()
+    {
+        if (AddressBook.Count > 0)
+        {
+            Console.WriteLine("Enter name of contact you want to delete ");
+            string deleteName = Console.ReadLine();
+            foreach (var item in AddressBook)
+            {
+                if (deleteName.ToLower() == item.FName.ToLower())
+                {
+                    AddressBook.Remove(item);
+                    Console.WriteLine(deleteName+"Contact is successfully deleted ");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(deleteName+"does not exist in AddressBook ");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine( "Address Book is empty ");
+        }
+    }
 }
 
 
