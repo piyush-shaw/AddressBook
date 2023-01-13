@@ -10,7 +10,7 @@ internal class Program
         while (flag)
         {
             Console.WriteLine("Welcome to Address Book Program");
-            Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Exit");
+            Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Edit Contact \n4.Exit");
             Console.WriteLine("\nEnter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -21,6 +21,10 @@ internal class Program
                     break;
                 case 2:
                     addressBookMain.ViewDetail();
+                    Console.WriteLine("\n");
+                    break;
+                case 3:
+                    addressBookMain.EditContact();
                     Console.WriteLine("\n");
                     break;
                 default:

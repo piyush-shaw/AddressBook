@@ -107,6 +107,103 @@ internal class AddressBookMain
         Console.WriteLine("Phone Number  : " + item.PhoneNumber);
         Console.WriteLine("email  :       " + item.Email);
     }
+
+    public void EditContact()
+    {
+        if (AddressBook.Count > 0)
+        {
+            Console.WriteLine("Enter name of the contact you want to edit ");
+            string editDetail = Console.ReadLine();
+            foreach(var item in AddressBook)
+            {
+                if (editDetail.ToLower() == item.FName.ToLower())
+                {
+                    Console.WriteLine("\nChoice what you want to edit \n1.First name \n2.Last name \n3.Address "+"" +
+                        "\n4.City \n5.State \n6.Zip Code \n7.Phone Number \n8.Email");
+                    int editChoice = int.Parse(Console.ReadLine());
+                    switch (editChoice)
+                    {
+                        case 1:
+                            Console.WriteLine("Enter new first name ");
+                            item.FName = Console.ReadLine();
+                            break;
+                        case 2:
+                            Console.WriteLine("Enter new last name ");
+                            item.LName = Console.ReadLine();
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter new address ");
+                            item.Address = Console.ReadLine();
+                            break;
+                        case 4:
+                            Console.WriteLine("Enter new city name ");
+                            item.City = Console.ReadLine();
+                            break;
+                        case 5:
+                            Console.WriteLine("Enter new state name ");
+                            item.State = Console.ReadLine();
+                            break;
+                        case 6:
+                            while (true)
+                            {
+                                Console.WriteLine("Enter Zip Code  : ");
+                                string code = Console.ReadLine();
+
+                                if (code.Length == 6)
+                                {
+                                    item.Zip = code;
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Enter a valid 6 digit Zip Code.");
+                                }
+                            }
+                            break;
+                        case 7:
+                            while (true)
+                            {
+                                Console.WriteLine("Enter Your Phone Number: ");
+                                string number = Console.ReadLine();
+
+                                if (number.Length == 10)
+                                {
+                                    item.PhoneNumber = number;
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Enter a valid 10 digit Phone Number.");
+                                }
+                            }
+                            break;
+                        case 8:
+                            while (true)
+                            {
+                                Console.WriteLine("Enter Your Email Address: ");
+                                string mail = Console.ReadLine();
+
+                                if (mail.Contains("@"))
+                                {
+                                    item.Email = mail;
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Enter a valid Email Address.");
+                                }
+                            }
+                            break;
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(editDetail+"Does not exist in AddressBook ");
+                }
+            }
+        }
+    }
 }
 
 
