@@ -1,7 +1,10 @@
-﻿internal class Program
+﻿using AddressBook;
+
+internal class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Address Book Program ");
+        Contact contact = new Contact();
     }
 }
