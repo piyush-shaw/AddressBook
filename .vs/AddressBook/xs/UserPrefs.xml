@@ -1,23 +1,27 @@
 ﻿<Properties StartupConfiguration="{BF67ECB3-90F3-4874-AA03-2191F03CEB66}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.AddressBook PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AddressBook/Program.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AddressBook/AddressBookMain.cs">
     <Files>
-      <File FileName="AddressBook/Program.cs" Line="5" Column="60" />
+      <File FileName="AddressBook/Program.cs" Line="30" Column="10" />
+      <File FileName="AddressBook/Contact.cs" Line="15" Column="2" />
+      <File FileName="AddressBook/AddressBookMain.cs" Line="31" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AddressBook" expanded="True">
-            <Node name="AddressBook" expanded="True" selected="True" />
+            <Node name="AddressBook" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/piyushshaw/Projects/AddressBook/AddressBook/AddressBookMain.cs" relfile="AddressBook/AddressBookMain.cs" line="14" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
