@@ -6,6 +6,7 @@ internal class Program
     {
         Contact contact = new Contact();
         AddressBookMain addressBookMain = new AddressBookMain();
+
         bool flag = true;
         while (flag)
         {

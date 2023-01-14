@@ -6,7 +6,6 @@ internal class AddressBookMain
     public static List<Contact> AddressBook = new List<Contact>();
 
     public void AddContact()
-
     {
         Console.WriteLine("Enter how many contacts you want to add");
         int n = Convert.ToInt32(Console.ReadLine());
@@ -204,6 +203,7 @@ internal class AddressBookMain
             }
         }
     }
+
     public void DeleteContact()
     {
         if (AddressBook.Count > 0)
