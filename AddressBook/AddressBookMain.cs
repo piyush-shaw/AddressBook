@@ -4,6 +4,7 @@ using AddressBook;
 internal class AddressBookMain
 {
     public static List<Contact> AddressBook = new List<Contact>();
+    int count = 0;
 
     public void AddContact()
     {
@@ -228,6 +229,28 @@ internal class AddressBookMain
         {
             Console.WriteLine( "Address Book is empty ");
         }
+    }
+
+    public void AddDictionary()
+    {
+        count = 0;
+        Console.WriteLine("Enter how many address book you want to enter ");
+        int addCount = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter how many contact you want to add ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        for(int i = 1; i <= n; i++)
+        {
+            AddContact();
+        }
+        Dictionary<int, string> dictionary = new Dictionary<int, string>();
+        for (int i = 1; i <= addCount; i++)
+        {
+            count++;
+            List<AddressBookMain> newAdd = new List<AddressBookMain>();
+            dictionary.Add(i, " New Dictionary");
+
+        }
+        Console.WriteLine("Address Book created " + count);
     }
 }
 
