@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using AddressBook;
 
 internal class AddressBookMain
@@ -6,6 +7,7 @@ internal class AddressBookMain
     public static List<Contact> AddressBook = new List<Contact>();
     int count = 0;
 
+    //Method to add a new contact to Address Book
     public void AddContact()
     {
         Console.WriteLine("Enter how many contacts you want to add");
@@ -81,6 +83,7 @@ internal class AddressBookMain
         }
     }
 
+    //Method to view the detail in address book
     public void ViewDetail()
     {
         if (AddressBook.Count > 0)
@@ -96,6 +99,7 @@ internal class AddressBookMain
         }
     }
 
+    //Method to print all detail in address book
     public void PrintDetail(Contact item)
     {
         Console.WriteLine("First Name :   " + item.FName);
@@ -108,6 +112,7 @@ internal class AddressBookMain
         Console.WriteLine("email  :       " + item.Email);
     }
 
+    //Method to edit existing contact person using their name
     public void EditContact()
     {
         if (AddressBook.Count > 0)
@@ -205,6 +210,7 @@ internal class AddressBookMain
         }
     }
 
+    //Method to delete a person using person's name
     public void DeleteContact()
     {
         if (AddressBook.Count > 0)
@@ -231,6 +237,7 @@ internal class AddressBookMain
         }
     }
 
+    //Method to Refactor to add multiple Address Book to the System.Each Address Book has a unique Name
     public void AddDictionary()
     {
         count = 0;
@@ -251,6 +258,25 @@ internal class AddressBookMain
 
         }
         Console.WriteLine("Address Book created " + count);
+    }
+
+    //Method to to ensure there is no Duplicate Entry of the samePerson in a particular AddressBook - Duplicate
+    public void DuplicateContact()
+    {
+        if (AddressBook.Count > 0)
+        {
+            Console.WriteLine("Enter the name to check : ");
+            string personName = Console.ReadLine();
+            bool check = AddressBook.Any(x => x.FName == personName);
+            if (check)
+            {
+                Console.WriteLine("Contact is present ");
+            }
+            else
+            {
+                Console.WriteLine("Contact is not present ");
+            }
+        }
     }
 }
 

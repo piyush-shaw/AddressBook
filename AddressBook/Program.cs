@@ -12,7 +12,7 @@ internal class Program
         {
             Console.WriteLine("Welcome to Address Book Program");
             Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Edit Contact \n4.Delete Contact "
-                +"\n5.Add Multiple Contact \n6.Add Multiple Address Book \n7.Exit");
+                +"\n5.Add Multiple Contact \n6.Add Multiple Address Book \n7.Check Duplicate Contact \n8.Exit");
             Console.WriteLine("\nEnter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -37,6 +37,9 @@ internal class Program
                     break;
                 case 6:
                     addressBookMain.AddDictionary();
+                    break;
+                case 7:
+                    addressBookMain.DuplicateContact();
                     break;
                 default:
                     flag = false;
