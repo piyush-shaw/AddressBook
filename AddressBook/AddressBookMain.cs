@@ -260,7 +260,7 @@ internal class AddressBookMain
         Console.WriteLine("Address Book created " + count);
     }
 
-    //Method to to ensure there is no Duplicate Entry of the samePerson in a particular AddressBook - Duplicate
+    //Method to to ensure there is no Duplicate Entry of the samePerson in a particular AddressBook 
     public void DuplicateContact()
     {
         if (AddressBook.Count > 0)
@@ -276,6 +276,27 @@ internal class AddressBookMain
             {
                 Console.WriteLine("Contact is not present ");
             }
+        }
+    }
+
+    //Method to search Person in a City or State across the multiple AddressBook 
+    public void SearchPersonByCityOrState()
+    {
+        if (AddressBook.Count > 0)
+        {
+            Console.WriteLine("Enter name to search ");
+            string personName = Console.ReadLine();
+            Console.WriteLine("Enter city to search ");
+            string cityName = Console.ReadLine();
+            foreach(var data in AddressBook.FindAll(x=>x.FName==personName && x.City == cityName))
+            {
+                Console.WriteLine("The Contact Details of " + data.City + " are: \n" + data.FName + "\n" + data.LName + "\n" + data.Address +
+                    "\n" + data.Zip + "\n" + data.PhoneNumber + "\n" + data.Email);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Address Book is empty");
         }
     }
 }
