@@ -319,8 +319,29 @@ internal class AddressBookMain
         {
             Console.WriteLine("Address Book is empty");
         }
-
     }
+
+    //Method to get number of contact persons i.e.count by City or State
+    public void CountPerson()
+    {
+        if (AddressBook.Count > 0)
+        {
+            Console.WriteLine("Enter city to search ");
+            string cityName = Console.ReadLine();
+            int count = 0;
+            foreach(var items in AddressBook.FindAll(x => x.City == cityName))
+            {
+                count++;
+            }
+            Console.WriteLine("No of contacts {0} in city {1}",count,cityName);
+        }
+        else
+        {
+            Console.WriteLine("Address Book is empty");
+        }
+    }
+
+
 }
 
 
