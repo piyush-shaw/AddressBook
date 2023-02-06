@@ -12,7 +12,8 @@ internal class Program
         {
             Console.WriteLine("Welcome to Address Book Program");
             Console.WriteLine("\nEnter your choice \n1.Add Contacts \n2.View Contacts \n3.Edit Contact \n4.Delete Contact "
-                +"\n5.Add Multiple Contact \n6.Add Multiple Address Book \n7.Check Duplicate Contact \n8.Search By Person City or State \n9.Exit");
+                +"\n5.Add Multiple Contact \n6.Add Multiple Address Book \n7.Check Duplicate Contact \n8.Search By Person City or State "
+                +"\n9.View By Person City or State \n10.Exit");
             Console.WriteLine("\nEnter option to execute");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -43,6 +44,9 @@ internal class Program
                     break;
                 case 8:
                     addressBookMain.SearchPersonByCityOrState();
+                    break;
+                case 9:
+                    addressBookMain.ViewPersonByCityOrState();
                     break;
                 default:
                     flag = false;
